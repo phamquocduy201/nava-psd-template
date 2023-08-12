@@ -9,6 +9,7 @@
   --center-search-mw: 65rem;
   --center-search-input-p: 2rem 2.5rem;
   --meta-number-fz: 2rem;
+  --center-mt: 20rem;
   // header top
   &-top {
     max-width: 1400px;
@@ -97,7 +98,7 @@
   // header center
   text-align: center;
   &-center {
-    margin-top: 20rem;
+    margin-top: var(--center-mt);
     &-heading {
       text-transform: uppercase;
       font-size: var(--center-heading-fz);
@@ -214,6 +215,8 @@
   }
 
   @include maxWidth(767px) {
+    min-height: 68rem;
+    --center-mt: 17rem;
     &-top {
       &-toggle {
         display: flex;
