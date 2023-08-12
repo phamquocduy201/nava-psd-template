@@ -203,18 +203,15 @@ button {
         -ms-flex: 1;
         flex: 1;
         padding: var(--center-search-input-p);
-        color: #898989; }
+        color: #898989;
+        text-transform: uppercase; }
         .header-center-search-input::-webkit-input-placeholder {
-          text-transform: uppercase;
           color: #898989; }
         .header-center-search-input::-moz-placeholder {
-          text-transform: uppercase;
           color: #898989; }
         .header-center-search-input::-ms-input-placeholder {
-          text-transform: uppercase;
           color: #898989; }
         .header-center-search-input::placeholder {
-          text-transform: uppercase;
           color: #898989; }
       .header-center-search-btn {
         padding-left: 2rem;

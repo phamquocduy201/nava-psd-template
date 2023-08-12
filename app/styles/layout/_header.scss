@@ -131,8 +131,8 @@
         flex: 1;
         padding: var(--center-search-input-p);
         color: #898989;
+        text-transform: uppercase;
         &::placeholder {
-          text-transform: uppercase;
           color: #898989;
         }
       }
