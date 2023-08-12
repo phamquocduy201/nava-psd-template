@@ -1,0 +1,283 @@
+.header {
+  background: linear-gradient(to bottom, rgba(#1d1416, 0.3), rgba(#1d1416, 0.3)), url(../images/img-header-bg.png) no-repeat center center / cover;
+  min-height: 75rem;
+  padding: 0 1.5rem;
+  --center-heading-fz: 7.2rem;
+  --center-heading-mb: 2rem;
+  --center-caption-fz: 3rem;
+  --center-caption-mb: 6rem;
+  --center-search-mw: 65rem;
+  --center-search-input-p: 2rem 2.5rem;
+  --meta-number-fz: 2rem;
+  // header top
+  &-top {
+    max-width: 1400px;
+    padding-top: 2.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    @include flexbox((
+      align-items: center,
+      justify-content: space-between
+    ));
+
+    &-logo {
+      @include size(15rem,3rem);
+      object-fit: cover;
+    }
+
+    &-toggle {
+      @include size(2.5rem);
+      @include flexbox((
+        flex-direction: column,
+        justify-content: space-between,
+      ));
+      position: relative;
+      display: none;
+      &::before {
+        content: "";
+        @include posFull;
+        background-color: transparent;
+      }
+      &-item {
+        @include size(100%, 4px);
+        background-color: #fff;
+        border-radius: 1rem;
+        transition: all 0.15s linear;
+        &.toggle-item-1, &.toggle-item-3 {
+          width: 33px;
+        }
+        &.toggle-item-1 {
+          transform: translate(-13%, 276%) rotate(45deg);
+        }
+        &.toggle-item-2 {
+          opacity: 0;
+          visibility: hidden;
+        }
+        &.toggle-item-3 {
+          transform: translate(-13%, -257%) rotate(-45deg);
+        }
+      }
+    }
+
+    &-menu {
+      @include flexbox((
+        align-items: center
+      ));
+      transition: all 0.15s linear;
+      &.is-expand {
+        transform: translateX(0);
+      }
+    }
+
+    &-item {
+      &-link {
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #f3f5fd;
+        transition: all 0.15s linear;
+        &:hover {
+          color: #fff;
+          border-color: #fff;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-left: 5rem;
+      }
+
+      &-signup {
+        padding: 1rem 3rem;
+        border: 2px solid $main-title-color;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  // header center
+  text-align: center;
+  &-center {
+    margin-top: 20rem;
+    &-heading {
+      text-transform: uppercase;
+      font-size: var(--center-heading-fz);
+      font-weight: bold;
+      color: $main-title-color;
+      margin-bottom: var(--center-heading-mb);
+    }
+
+    &-caption {
+      font-family: $secondary-font;
+      text-transform: uppercase;
+      font-size: var(--center-caption-fz);
+      color: $main-title-color;
+      font-weight: 400;
+      margin-bottom: var(--center-caption-mb);
+    }
+
+    &-search {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: var(--center-search-mw);
+      @include flexbox;
+      border-radius: 4px;
+      overflow: hidden;
+
+      &-input , &-btn {
+        border: unset;
+      }
+
+      &-input {
+        flex: 1;
+        padding: var(--center-search-input-p);
+        color: #898989;
+        &::placeholder {
+          text-transform: uppercase;
+          color: #898989;
+        }
+      }
+
+      &-btn {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        background-color: $primary-color;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      &-text {
+        margin-left: 1rem;
+      }
+
+      &-icon {
+        flex-shrink: 0;
+      }
+    }
+  }
+  
+  // header meta
+  position: relative;
+  &-meta {
+    @include absoluteCenter("left");
+    bottom: 0;
+    transform: translate(-50%,50%);
+    @include flexbox;
+    width: 1000px;
+    padding: 3rem 0;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px 0 rgba(228,228,228,0.8);
+    font-family: $secondary-font;
+
+    &-item {
+      width: 25%;
+      > * {
+        display: block;
+      }
+      &:not(:first-of-type) {
+        border-left: 1px solid #d4d4d4;
+      }
+    }
+
+    &-number {
+      font-size: var(--meta-number-fz);
+      font-weight: bold;
+      color: $meta-number-color;
+      margin-bottom: 1.5rem;
+    }
+    
+    &-text {
+      text-transform: capitalize;
+      color: $gray-color;
+    }
+  }
+
+  @include maxWidth(1279px) {
+    padding: 0 1.5rem;
+    --center-heading-fz: 6.2rem;
+    --center-caption-fz: 2.5rem;
+    --center-search-mw: 60rem;
+    --center-search-input-p: 1.5rem 2.5rem;
+    --meta-number-fz: 1.8rem;
+
+  }
+  
+  @include maxWidth(1023px) {
+    --center-heading-fz: 5.2rem;
+    --center-caption-fz: 2.5rem;
+    --center-search-mw: 52rem;
+    &-meta {
+      width: 95%;
+      padding: 2rem 0;
+    }
+  }
+
+  @include maxWidth(767px) {
+    &-top {
+      &-toggle {
+        display: flex;
+      }
+      &-menu {
+        display: block;
+        @include posFull((
+          position: fixed,
+          right: 20%,
+        ));
+        background-color: $gray-dark-color;
+        transform: translateX(-100%);
+      }
+      &-item {
+        &:not(:nth-child(999)) {
+          margin-left: unset;
+        }
+        &-link {
+          display: inline-block;
+          width: 100%;
+          padding: 20px 0;
+          border: unset;
+        }
+      }
+    }
+    --center-heading-mb: 3rem;
+    &-center-search-text {
+      display: none;
+    }
+    &-meta {
+      width: 100%;
+      border-radius: unset;
+      box-shadow: unset;
+      flex-wrap: wrap;
+      row-gap: 2rem;
+      transform: translate(-50%,100%);
+      &-item {
+        width: 50%;
+        &:nth-of-type(3) {
+          border: unset;
+        }
+      }
+    }
+  }
+
+  @include maxWidth(479px) {
+    &-top {
+      &-logo {
+        @include size(10rem,2rem);
+      }
+    }
+    --center-heading-fz: 4.2rem;
+    --center-heading-mb: 2rem;
+    --center-caption-fz: 2rem;
+    --center-caption-mb: 6rem;
+    --center-search-mw: 65rem;
+    --center-search-input-p: 1.5rem;
+    &-center {
+      &-caption {
+        line-height: 1.4;
+      }
+      &-search-input {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

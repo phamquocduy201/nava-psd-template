@@ -1,0 +1,73 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexbox($config: ()) {
+  $config: extend(
+    (
+      display: flex,
+      align-items: stretch,
+      justify-content: center,
+      flex-direction: row,
+      flex-wrap: nowrap
+    ),
+    $config
+  );
+
+  display: map-get($config,display);
+  align-items: map-get($config,align-items);
+  justify-content: map-get($config,justify-content);
+  flex-direction: map-get($config,flex-direction);
+  flex-wrap: map-get($config,flex-wrap);
+}
+
+@mixin absoluteCenter($direction: "both") {
+  @if $direction == "both" {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  @if $direction == "left" {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $direction == "top" {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin posFull($config: ()) {
+  $config: extend(
+    (
+      position: absolute,
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+    ),
+    $config
+  );
+
+  position: map-get($config,position);
+  top: map-get($config,top);
+  left: map-get($config,left);
+  right: map-get($config,right);
+  bottom: map-get($config,bottom);
+}
+
+@mixin maxWidth($breakPoint) {
+  @media screen and (max-width: $breakPoint) {
+    @content
+  }
+} 
+
+@mixin minWidth($breakPoint) {
+  @media screen and (min-width: $breakPoint) {
+    @content
+  }
+} 

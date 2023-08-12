@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: unset;
+  font-family: $primary-font;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+button {
+  cursor: pointer;
+}

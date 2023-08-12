@@ -1,0 +1,43 @@
+section.header
+  .header-top 
+    img(src="./images/img-header-logo.png").header-top-logo   
+    .header-top-toggle
+      .header-top-toggle-item
+      .header-top-toggle-item
+      .header-top-toggle-item
+    ul.header-top-menu
+      li.header-top-item
+        a(href="#").header-top-item-link Top destinations
+      li.header-top-item
+        a(href="#").header-top-item-link Add your boat 
+      li.header-top-item
+        a(href="#").header-top-item-link.header-top-item-signup Sign up 
+  .header-center 
+    h1.header-center-heading Reserve a boat now!
+    h2.header-center-caption and set your sails into paradise!
+    form.header-center-search
+      input.header-center-search-input(type="text" placeholder="What is your distination sailor ?")
+      button.header-center-search-btn(type="submit") 
+        i.fa.fa-search.header-center-search-icon
+        span.header-center-search-text find a boat
+  ul.header-meta
+    +headerMetaItem({
+      number: "2,300",
+      text: "Destinations"
+    })
+    +headerMetaItem({
+      number: "1,000",
+      text: "Cities"
+    })
+    +headerMetaItem({
+      number: "35,000",
+      text: "Boats"
+    })
+    +headerMetaItem({
+      number: "50,000",
+      text: "Sailors"
+    })
+      
+
+
+  
