@@ -1,0 +1,159 @@
+.destination {
+  padding-top: 16rem;
+  padding-bottom: 8rem;
+  background-color: #fff;
+  &-heading {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: $sub-title-color;
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  &-caption {
+    font-family: $secondary-font;
+    font-size: 1.6rem;
+    color: $gray-color;
+    text-align: center;
+    margin-bottom: 7rem;
+    line-height: 1.5;
+  }
+
+  // Container 
+  &-content {
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 30rem);
+    grid-template-areas: 
+    "h1 h1 h2"
+    "h3 h4 h5";
+    grid-gap: 2rem;
+    margin-bottom: 8rem;
+    &-item {
+      border-radius: 4px;
+      box-shadow: 0 0 5px 0 rgba(#929292, 0.2);
+      position: relative;
+      position: relative;
+      &::before {
+        content: "";
+        @include posFull((
+          position: absolute
+          ));
+        transition: all 0.2s linear;
+      }
+      &:first-of-type {
+        grid-area: h1;
+        background: url(../images/img-destination-1.png) no-repeat center center / cover;
+      }
+      &:nth-of-type(2) {
+        background: url(../images/img-destination-2.png) no-repeat center center / cover;
+        grid-area: h2;
+      }
+      &:nth-of-type(3) {
+        background: url(../images/img-destination-3.png) no-repeat center center / cover;
+        grid-area: h3;
+      }
+      &:nth-of-type(4) {
+        background: url(../images/img-destination-4.png) no-repeat center center / cover;
+        grid-area: h4;
+      }
+      &:last-of-type {
+        background: url(../images/img-destination-5.png) no-repeat center center / cover;
+        grid-area: h5;
+      }
+      &:hover {
+        &::before {
+          background-color: rgba(#000, 0.1);
+        }
+      }
+    }
+    &-meta {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      min-width: 7rem;
+      max-width: calc(100% - 4rem);
+      height: 3.5rem;
+      padding: 0 1rem;
+      background-color: $primary-color;
+      border-radius: 4px;
+      color: #fff;
+      @include flexbox((
+        align-items: center,
+        justify-content: center,
+      ));
+      &-number {
+        font-family: $secondary-font;
+        font-weight: bold;
+        margin-left: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    &-position {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      max-width: calc(100% - 4rem);
+      &-place {
+        font-size: 2.5rem;
+        color: #fff;
+        margin-bottom: 5px;
+        @include textClamp;
+        line-height: 1.3;
+      }
+      &-nation {
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        color: #fff;
+        @include textClamp;
+      }
+    }
+  }
+
+  &-button {
+    // padding: 2rem 4rem;
+    display: block;
+    @include size(30rem,6rem);
+    @include flexbox((
+      align-items: center,
+      justify-content: center
+    ));
+    margin: 0 auto;
+    margin-bottom: 7rem; 
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $meta-number-color;
+  }
+
+  @include maxWidth(767px) {
+    padding-top: 20rem;
+    &-heading {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    &-caption {
+      margin-bottom: 5rem;
+      font-size: 1.4rem;
+    }
+    &-content {
+      margin-bottom: 5rem;
+      grid-template-areas: 
+      "h1"
+      "h2"
+      "h3"
+      "h4"
+      "h5";
+      grid-template-rows: repeat(5, 30rem);
+      &-position-place {
+        font-size: 2rem;
+      }
+    }
+    &-button {
+      width: 100%;
+    }
+  }
+}
