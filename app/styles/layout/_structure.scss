@@ -9,3 +9,80 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.blockSubTitle {
+  &-heading {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bold;
+    color: $sub-title-color;
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+  &-caption {
+    font-family: $secondary-font;
+    font-size: 1.6rem;
+    color: $gray-color;
+    text-align: center;
+    margin-bottom: 7rem;
+    line-height: 1.5;
+  }
+  @include maxWidth(767px) {
+    &-heading {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    &-caption {
+      margin-bottom: 5rem;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.blockTitle {
+  &-heading {
+    text-transform: uppercase;
+    font-size: 7.2rem;
+    font-weight: bold;
+    color: $main-title-color;
+    margin-bottom: 2rem;
+  }
+  &-caption {
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: $main-title-color;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 8rem;
+  }
+  @include maxWidth(1279px) {
+    &-heading {
+      font-size:  6.2rem;
+    }
+    &-caption {
+      font-size: 2.5rem;
+    }
+  }
+  @include maxWidth(1023px) {
+    &-heading {
+      font-size:  5.2rem;
+    }
+  }
+  @include maxWidth(767px) {
+    &-heading {
+      margin-bottom: 3rem;
+    }
+  }
+  @include maxWidth(479px) {
+    &-heading {
+      font-size:  4.2rem;
+      margin-bottom: 2rem;
+    }
+    &-caption {
+      font-size: 2rem;
+      margin-bottom: 6rem;
+    }
+  }
+}

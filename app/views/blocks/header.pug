@@ -13,8 +13,10 @@ section.header
       li.header-top-item
         a(href="#").header-top-item-link.header-top-item-signup Sign up 
   .header-center 
-    h1.header-center-heading Reserve a boat now!
-    h2.header-center-caption and set your sails into paradise!
+    +blockTitle({
+      heading: "Reserve a boat now!",
+      caption: "and set your sails into paradise!"
+    })
     form.header-center-search
       input.header-center-search-input(type="text" placeholder="What is your destination sailor ?")
       button.header-center-search-btn(type="submit") 

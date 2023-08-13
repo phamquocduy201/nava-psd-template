@@ -1,7 +1,10 @@
 section.destination
   .container 
-    h2.destination-heading Explore our top destinations 
-    p.destination-caption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus laborum exercitationem, in similique ut
+    +blockSubTitle({
+      heading: "Explore our top destinations",
+      caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus laborum exercitationem, in similique ut"
+    })
+    p.destination-caption 
     .destination-container
       .destination-content 
         +destinationItem({

@@ -38,6 +38,69 @@ button {
   margin-left: auto;
   margin-right: auto; }
 
+.blockSubTitle-heading {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #343435;
+  margin-bottom: 2rem;
+  text-align: center;
+  line-height: 1.2; }
+
+.blockSubTitle-caption {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #717171;
+  text-align: center;
+  margin-bottom: 7rem;
+  line-height: 1.5; }
+
+@media screen and (max-width: 767px) {
+  .blockSubTitle-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+  .blockSubTitle-caption {
+    margin-bottom: 5rem;
+    font-size: 1.4rem; } }
+
+.blockTitle-heading {
+  text-transform: uppercase;
+  font-size: 7.2rem;
+  font-weight: bold;
+  color: #f9fafe;
+  margin-bottom: 2rem; }
+
+.blockTitle-caption {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #f9fafe;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 8rem; }
+
+@media screen and (max-width: 1279px) {
+  .blockTitle-heading {
+    font-size: 6.2rem; }
+  .blockTitle-caption {
+    font-size: 2.5rem; } }
+
+@media screen and (max-width: 1023px) {
+  .blockTitle-heading {
+    font-size: 5.2rem; } }
+
+@media screen and (max-width: 767px) {
+  .blockTitle-heading {
+    margin-bottom: 3rem; } }
+
+@media screen and (max-width: 479px) {
+  .blockTitle-heading {
+    font-size: 4.2rem;
+    margin-bottom: 2rem; }
+  .blockTitle-caption {
+    font-size: 2rem;
+    margin-bottom: 6rem; } }
+
 .header {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(29, 20, 22, 0.3)), to(rgba(29, 20, 22, 0.3))), url(../images/img-header-bg.png) no-repeat center center/cover;
   background: linear-gradient(to bottom, rgba(29, 20, 22, 0.3), rgba(29, 20, 22, 0.3)), url(../images/img-header-bg.png) no-repeat center center/cover;
@@ -276,8 +339,7 @@ button {
       --center-heading-fz: 6.2rem;
       --center-caption-fz: 2.5rem;
       --center-search-mw: 60rem;
-      --center-search-input-p: 1.5rem 2.5rem;
-      --meta-number-fz: 1.8rem; } }
+      --center-search-input-p: 1.5rem 2.5rem; } }
   @media screen and (max-width: 1023px) {
     .header {
       --center-heading-fz: 5.2rem;
@@ -350,21 +412,7 @@ button {
   padding-top: 16rem;
   padding-bottom: 8rem;
   background-color: #fff; }
-  .destination-heading {
-    text-transform: uppercase;
-    font-size: 3rem;
-    color: #343435;
-    margin-bottom: 2rem;
-    text-align: center;
-    line-height: 1.2; }
-  .destination-caption {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.6rem;
-    color: #717171;
-    text-align: center;
-    margin-bottom: 7rem;
-    line-height: 1.5; }
-  .destination-content {
+  .destination-content, .boat-content {
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: (30rem)[2];
@@ -372,13 +420,13 @@ button {
     grid-template-areas: "h1 h1 h2" "h3 h4 h5";
     grid-gap: 2rem;
     margin-bottom: 8rem; }
-    .destination-content-item {
+    .destination-content-item, .boat-content-item {
       border-radius: 4px;
       -webkit-box-shadow: 0 0 5px 0 rgba(146, 146, 146, 0.2);
       box-shadow: 0 0 5px 0 rgba(146, 146, 146, 0.2);
       position: relative;
       position: relative; }
-      .destination-content-item::before {
+      .destination-content-item::before, .boat-content-item::before {
         content: "";
         position: absolute;
         top: 0;
@@ -388,36 +436,35 @@ button {
         border-radius: inherit;
         -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear; }
-      .destination-content-item:first-of-type {
+      .destination-content-item:first-of-type, .boat-content-item:first-of-type {
         -ms-grid-row: 1;
         -ms-grid-column: 1;
-        -ms-grid-column-span: 2;
         grid-area: h1; }
-      .destination-content-item:nth-of-type(2) {
+      .destination-content-item:nth-of-type(2), .boat-content-item:nth-of-type(2) {
         -ms-grid-row: 1;
-        -ms-grid-column: 3;
+        -ms-grid-column: 2;
         grid-area: h2; }
-      .destination-content-item:nth-of-type(3) {
+      .destination-content-item:nth-of-type(3), .boat-content-item:nth-of-type(3) {
         -ms-grid-row: 2;
         -ms-grid-column: 1;
         grid-area: h3; }
-      .destination-content-item:nth-of-type(4) {
+      .destination-content-item:nth-of-type(4), .boat-content-item:nth-of-type(4) {
         -ms-grid-row: 2;
         -ms-grid-column: 2;
         grid-area: h4; }
-      .destination-content-item:last-of-type {
+      .destination-content-item:last-of-type, .boat-content-item:last-of-type {
         -ms-grid-row: 2;
         -ms-grid-column: 3;
         grid-area: h5; }
-      .destination-content-item:hover::before {
+      .destination-content-item:hover::before, .boat-content-item:hover::before {
         background-color: rgba(0, 0, 0, 0.1); }
-    .destination-content-img {
+    .destination-content-img, .boat-content-img {
       width: 100%;
       height: 100%;
       -o-object-fit: cover;
       object-fit: cover;
       border-radius: inherit; }
-    .destination-content-meta {
+    .destination-content-meta, .boat-content-meta {
       position: absolute;
       top: 2rem;
       left: 2rem;
@@ -443,37 +490,43 @@ button {
       flex-direction: row;
       -ms-flex-wrap: nowrap;
       flex-wrap: nowrap; }
-      .destination-content-meta-number {
+      .destination-content-meta-number, .boat-content-meta {
         font-family: "Open Sans", sans-serif;
         font-weight: bold;
         margin-left: 5px;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; }
-    .destination-content-position {
+    .destination-content-position, .boat-content-info {
       position: absolute;
       bottom: 2rem;
       left: 2rem;
+      width: 100%;
       max-width: calc(100% - 4rem); }
-      .destination-content-position-place {
+      .destination-content-position-place, .boat-content-info-name {
         font-size: 2.5rem;
+        font-weight: bold;
         color: #fff;
-        margin-bottom: 5px;
+        margin-bottom: 1.5rem;
         width: 100%;
         max-width: 100%;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
         line-height: 1.3; }
-      .destination-content-position-nation {
+      .destination-content-position-nation, .boat-content-info-position, .boat-content-info-berth {
         text-transform: capitalize;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        font-weight: 500;
         color: #fff;
         width: 100%;
         max-width: 100%;
         overflow: hidden;
         white-space: nowrap;
-        text-overflow: ellipsis; }
-  .destination-button {
+        text-overflow: ellipsis;
+        width: unset;
+        line-height: 1.3; }
+  .destination-button, .boat-button {
     display: block;
     width: 30rem;
     height: 6rem;
@@ -502,20 +555,12 @@ button {
     .destination {
       padding-top: 20rem;
       padding-bottom: 5rem; }
-      .destination-heading {
-        font-size: 2rem;
-        margin-bottom: 1rem; }
-      .destination-caption {
-        margin-bottom: 5rem;
-        font-size: 1.4rem; }
-      .destination-content {
+      .destination-content, .boat-content {
         margin-bottom: 2rem;
         grid-template-areas: "h1" "h2" "h3" "h4" "h5";
         -ms-grid-rows: (30rem)[5];
         grid-template-rows: repeat(5, 30rem); }
-        .destination-content-position-place {
-          font-size: 2rem; }
-      .destination-button {
+      .destination-button, .boat-button {
         width: 100%; } }
 
 .question {
@@ -537,11 +582,7 @@ button {
   flex-direction: row;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  text-align: center;
-  --heading-fz: 7.2rem;
-  --heading-mb: 2rem;
-  --caption-fz: 3rem;
-  --caption-mb: 8rem; }
+  text-align: center; }
   .question-heading {
     text-transform: uppercase;
     font-size: var(--heading-fz);
@@ -566,21 +607,59 @@ button {
     color: #fff; }
   @media screen and (max-width: 1279px) {
     .question {
-      padding: 0 1.5rem;
-      --center-heading-fz: 6.2rem;
-      --center-caption-fz: 2.5rem; } }
-  @media screen and (max-width: 1023px) {
-    .question {
-      --heading-fz: 5.2rem;
-      --caption-fz: 2.5rem; } }
-  @media screen and (max-width: 767px) {
-    .question {
-      --heading-mb: 3rem; } }
+      padding: 0 1.5rem; } }
   @media screen and (max-width: 479px) {
-    .question {
-      --heading-fz: 4.2rem;
-      --heading-mb: 2rem;
-      --caption-fz: 2rem;
-      --caption-mb: 6rem; }
-      .question-button {
-        font-size: 1.2rem; } }
+    .question-button {
+      font-size: 1.2rem; } }
+
+.boat {
+  padding: 10rem 0 8rem;
+  background-color: #fff; }
+  .boat-content {
+    grid-template-areas: "h1 h2" "h3 h4"; }
+    .boat-content-item:first-of-type {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+      grid-area: h1; }
+    .boat-content-item:nth-of-type(2) {
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
+      grid-area: h2; }
+    .boat-content-item:nth-of-type(3) {
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
+      grid-area: h3; }
+    .boat-content-item:last-of-type {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      grid-area: h4; }
+    .boat-content-meta {
+      margin-left: 0; }
+    .boat-content-info-name {
+      text-transform: capitalize; }
+    .boat-content-info-position {
+      margin-right: 3rem; }
+    .boat-content-info-position, .boat-content-info-berth {
+      display: inline-block;
+      font-family: "Open Sans", sans-serif;
+      max-width: calc(50% - 1.5rem); }
+      .boat-content-info-position i, .boat-content-info-berth i {
+        margin-right: 1rem; }
+  @media screen and (max-width: 767px) {
+    .boat {
+      padding-top: 5rem;
+      padding-bottom: 5rem; }
+      .boat-content {
+        margin-bottom: 2rem;
+        grid-template-areas: "h1" "h2" "h3" "h4";
+        -ms-grid-rows: (30rem)[4];
+        grid-template-rows: repeat(4, 30rem); }
+      .boat-button {
+        width: 100%; } }
+  @media screen and (max-width: 479px) {
+    .boat-content-info-position {
+      margin-right: 0;
+      margin-bottom: 5px; }
+    .boat-content-info-position, .boat-content-info-berth {
+      display: block;
+      max-width: 100%; } }

@@ -6,10 +6,6 @@
     justify-content: center
   ));
   text-align: center;
-  --heading-fz: 7.2rem;
-  --heading-mb: 2rem;
-  --caption-fz: 3rem;
-  --caption-mb: 8rem;
   &-heading {
     text-transform: uppercase;
     font-size: var(--heading-fz);
@@ -39,24 +35,10 @@
 
   @include maxWidth(1279px) {
     padding: 0 1.5rem;
-    --center-heading-fz: 6.2rem;
-    --center-caption-fz: 2.5rem;
-  }
-  
-  @include maxWidth(1023px) {
-    --heading-fz: 5.2rem;
-    --caption-fz: 2.5rem;
-  }
 
-  @include maxWidth(767px) {
-    --heading-mb: 3rem;
   }
 
   @include maxWidth(479px) {
-    --heading-fz: 4.2rem;
-    --heading-mb: 2rem;
-    --caption-fz: 2rem;
-    --caption-mb: 6rem;
     &-button {
       font-size: 1.2rem;
     }

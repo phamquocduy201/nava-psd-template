@@ -12,3 +12,27 @@ mixin destinationItem(data)
     .destination-content-position 
       .destination-content-position-place= data.place
       .destination-content-position-nation= data.nation
+
+mixin boatItem(data)
+  a(href= data.link).boat-content-item 
+    img(src= data.src).boat-content-img
+    .boat-content-meta
+      i.fa.fa-dollar-sign
+      = data.money
+    .boat-content-info 
+      .boat-content-info-name= data.name
+      span.boat-content-info-position
+        i.fa.fa-location
+        = data.position
+      span.boat-content-info-berth
+        i.fa.fa-users 
+        = data.berth
+      
+
+mixin blockSubTitle(data)
+  h2.blockSubTitle-heading= data.heading
+  p.blockSubTitle-caption= data.caption
+
+mixin blockTitle(data) 
+  h1.blockTitle-heading= data.heading
+  h2.blockTitle-caption= data.caption
