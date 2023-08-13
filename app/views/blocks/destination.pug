@@ -4,39 +4,39 @@ section.destination
     p.destination-caption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus laborum exercitationem, in similique ut
     .destination-container
       .destination-content 
-        a(href="#").destination-content-item 
-          .destination-content-meta 
-            i.fa.fa-heart.destination-content-meta-icon 
-            span.destination-content-meta-number 730
-          .destination-content-position 
-            .destination-content-position-place Figueira da Foz
-            .destination-content-position-nation Portogal
-        a(href="#").destination-content-item 
-          .destination-content-meta 
-            i.fa.fa-heart.destination-content-meta-icon 
-            span.destination-content-meta-number 621
-          .destination-content-position 
-            .destination-content-position-place Ibiza
-            .destination-content-position-nation Spain
-        a(href="#").destination-content-item 
-          .destination-content-meta 
-            i.fa.fa-heart.destination-content-meta-icon 
-            span.destination-content-meta-number 543
-          .destination-content-position 
-            .destination-content-position-place Palma de Mallorca
-            .destination-content-position-nation Spain
-        a(href="#").destination-content-item 
-          .destination-content-meta 
-            i.fa.fa-heart.destination-content-meta-icon 
-            span.destination-content-meta-number 495
-          .destination-content-position 
-            .destination-content-position-place Portofino
-            .destination-content-position-nation Italia
-        a(href="#").destination-content-item 
-          .destination-content-meta 
-            i.fa.fa-heart.destination-content-meta-icon 
-            span.destination-content-meta-number 402
-          .destination-content-position 
-            .destination-content-position-place Port Hercules
-            .destination-content-position-nation Monaco
+        +destinationItem({
+          link: "#",
+          src: "../images/img-destination-1.png",
+          number: "730",
+          place: "Figueira da Foz",
+          nation: "Portogal"
+        })
+        +destinationItem({
+          link: "#",
+          src: "../images/img-destination-2.png",
+          number: "621",
+          place: "Ibiza",
+          nation: "Spain"
+        })
+        +destinationItem({
+          link: "#",
+          src: "../images/img-destination-3.png",
+          number: "543",
+          place: "Palma de Mallorca",
+          nation: "Spain"
+        })
+        +destinationItem({
+          link: "#",
+          src: "../images/img-destination-4.png",
+          number: "495",
+          place: "Portofino",
+          nation: "Italia"
+        })
+        +destinationItem({
+          link: "#",
+          src: "../images/img-destination-5.png",
+          number: "402",
+          place: "Port Hercules",
+          nation: "Monaco"
+        })
       a.destination-button(href="#") Explore more destinations 

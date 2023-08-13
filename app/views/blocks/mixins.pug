@@ -2,3 +2,13 @@ mixin headerMetaItem(data)
   li.header-meta-item
     span.header-meta-number= data.number
     span.header-meta-text= data.text
+
+mixin destinationItem(data)
+  a(href= data.link).destination-content-item 
+    img(src= data.src).destination-content-img
+    .destination-content-meta 
+      i.fa.fa-heart.destination-content-meta-icon 
+      span.destination-content-meta-number= data.number
+    .destination-content-position 
+      .destination-content-position-place= data.place
+      .destination-content-position-nation= data.nation

@@ -1,0 +1,61 @@
+.question {
+  background: linear-gradient(to bottom, rgba(#1d1416, 0.5), rgba(#1d1416, 0.5)), url(../images/img-question-bg.png) no-repeat center center / cover;
+  min-height: 45rem;
+  @include flexbox((
+    align-items: center,
+    justify-content: center
+  ));
+  text-align: center;
+  --heading-fz: 7.2rem;
+  --heading-mb: 2rem;
+  --caption-fz: 3rem;
+  --caption-mb: 8rem;
+  &-heading {
+    text-transform: uppercase;
+    font-size: var(--heading-fz);
+    font-weight: bold;
+    color: $main-title-color;
+    margin-bottom: var(--heading-mb);
+  }
+
+  &-caption {
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    font-size: var(--caption-fz);
+    color: $main-title-color;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: var(--caption-mb);
+  }
+  &-button {
+    padding: 1.5rem 3rem;
+    border-radius: 4px;
+    background: $primary-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  @include maxWidth(1279px) {
+    padding: 0 1.5rem;
+    --center-heading-fz: 6.2rem;
+    --center-caption-fz: 2.5rem;
+  }
+  
+  @include maxWidth(1023px) {
+    --heading-fz: 5.2rem;
+    --caption-fz: 2.5rem;
+  }
+
+  @include maxWidth(767px) {
+    --heading-mb: 3rem;
+  }
+
+  @include maxWidth(479px) {
+    --heading-fz: 4.2rem;
+    --heading-mb: 2rem;
+    --caption-fz: 2rem;
+    --caption-mb: 6rem;
+  }
+}

@@ -40,26 +40,22 @@
         @include posFull((
           position: absolute
           ));
+          border-radius: inherit;
         transition: all 0.2s linear;
       }
       &:first-of-type {
         grid-area: h1;
-        background: url(../images/img-destination-1.png) no-repeat center center / cover;
       }
       &:nth-of-type(2) {
-        background: url(../images/img-destination-2.png) no-repeat center center / cover;
         grid-area: h2;
       }
       &:nth-of-type(3) {
-        background: url(../images/img-destination-3.png) no-repeat center center / cover;
         grid-area: h3;
       }
       &:nth-of-type(4) {
-        background: url(../images/img-destination-4.png) no-repeat center center / cover;
         grid-area: h4;
       }
       &:last-of-type {
-        background: url(../images/img-destination-5.png) no-repeat center center / cover;
         grid-area: h5;
       }
       &:hover {
@@ -67,6 +63,11 @@
           background-color: rgba(#000, 0.1);
         }
       }
+    }
+    &-img {
+      @include size(100%);
+      object-fit: cover;
+      border-radius: inherit;
     }
     &-meta {
       position: absolute;
@@ -113,7 +114,6 @@
   }
 
   &-button {
-    // padding: 2rem 4rem;
     display: block;
     @include size(30rem,6rem);
     @include flexbox((
@@ -121,7 +121,6 @@
       justify-content: center
     ));
     margin: 0 auto;
-    margin-bottom: 7rem; 
     border: 1px solid $border-color;
     border-radius: 4px;
     text-decoration: none;
@@ -131,6 +130,7 @@
 
   @include maxWidth(767px) {
     padding-top: 20rem;
+    padding-bottom: 5rem;
     &-heading {
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -140,7 +140,7 @@
       font-size: 1.4rem;
     }
     &-content {
-      margin-bottom: 5rem;
+      margin-bottom: 2rem;
       grid-template-areas: 
       "h1"
       "h2"
