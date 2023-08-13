@@ -581,4 +581,6 @@ button {
       --heading-fz: 4.2rem;
       --heading-mb: 2rem;
       --caption-fz: 2rem;
-      --caption-mb: 6rem; } }
+      --caption-mb: 6rem; }
+      .question-button {
+        font-size: 1.2rem; } }
