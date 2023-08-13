@@ -24,7 +24,14 @@
     margin-bottom: var(--caption-mb);
   }
   &-button {
-    padding: 1.5rem 3rem;
+    @include flexbox((
+      align-items: center,
+      justify-content: center
+    ));
+    width: 100%;
+    max-width: 274px;
+    height: 46px;
+    margin: 0 auto;
     border-radius: 4px;
     background: $primary-color;
     text-decoration: none;

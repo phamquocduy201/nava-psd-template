@@ -598,7 +598,25 @@ button {
     line-height: 1.4;
     margin-bottom: var(--caption-mb); }
   .question-button {
-    padding: 1.5rem 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 274px;
+    height: 46px;
+    margin: 0 auto;
     border-radius: 4px;
     background: #e7434e;
     text-decoration: none;
