@@ -702,7 +702,7 @@ button {
     margin-top: 2.5rem;
     font-family: "Open Sans", sans-serif; }
     .footer-item-content li:not(:last-of-type) {
-      margin-bottom: 2rem; }
+      margin-bottom: 1.5rem; }
     .footer-item-content a {
       display: inline-block;
       text-decoration: none;
@@ -710,7 +710,8 @@ button {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 16rem; }
+      max-width: 16rem;
+      line-height: 1.5; }
   .footer-item-search {
     max-width: 35rem;
     margin-top: 2rem;
